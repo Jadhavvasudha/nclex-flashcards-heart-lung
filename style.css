@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.flashcard {
+    background-color: #ffe4e1; /* Faint pink background */
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    position: relative;
+    height: auto; /* Height adjusts to content */
+    overflow: hidden;
+    text-align: left;
+}
+
+.flashcard h2 {
+    color: black;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.category-button {
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.category-button[data-category="signsSymptoms"] {
+    background-color: #007bff; /* Blue */
+}
+
+.category-button[data-category="diagnosis"] {
+    background-color: #28a745; /* Green */
+}
+
+.category-button[data-category="treatment"] {
+    background-color: #ffc107; /* Yellow */
+    color: black; /* Ensure text is readable on yellow */
+}
+
+.category-button[data-category="exacerbation"] {
+    background-color: #dc3545; /* Red */
+}
+
+.category-button:hover {
+    opacity: 0.8; /* Slight transparency on hover */
+}
+
+.category-content {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+
+.category-content h3 {
+    color: black;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.category-content p {
+    font-size: 1.1em;
+}
+
+.category-content[id="signsSymptoms"] p {
+    color: blue;
+}
+
+.category-content[id="diagnosis"] p {
+    color: green;
+}
+
+.category-content[id="treatment"] p {
+    color: red;
+}
+
+.category-content[id="exacerbation"] p {
+    color: black; /* Or any color you prefer */
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navigation button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.navigation button:hover {
+    background-color: #0056b3;
+}
+
+#card-number {
+    font-size: 1.2em;
+    color: #333;
+}
